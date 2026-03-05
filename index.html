@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIV // ARSIP DIGITAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              'agency-black': '#050505',
+              'agency-gray': '#121212',
+              'agency-border': '#333333',
+              'alert-red': '#bd1b1b',
+              'terminal-green': '#10b981',
+              'terminal-amber': '#d97706',
+              'muted-text': '#525252',
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #1f1f1f 1px, transparent 1px), linear-gradient(to bottom, #1f1f1f 1px, transparent 1px)",
+            }
+          },
+        },
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "ethers": "https://esm.sh/ethers@6.13.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.44.4"
+  }
+}
+</script>
+<style>
+  body {
+    background-color: #050505;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  /* CRT Scanline effect */
+  .scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.3;
+  }
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+      background: #050505; 
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #333; 
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #10b981; 
+  }
+</style>
+</head>
+<body class="bg-agency-black text-gray-300 antialiased selection:bg-terminal-green selection:text-black">
+<div class="scanline"></div>
+<div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

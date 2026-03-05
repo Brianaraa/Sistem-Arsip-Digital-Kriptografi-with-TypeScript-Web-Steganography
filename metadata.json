@@ -1,0 +1,5 @@
+{
+  "name": "CipherCom: Secure Comms",
+  "description": "A covert communication platform demonstrating advanced client-side cryptographic techniques for untraceable messaging and data concealment.",
+  "requestFramePermissions": []
+}
